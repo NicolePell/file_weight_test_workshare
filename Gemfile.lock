@@ -33,13 +33,19 @@ GEM
     multi_json (1.10.1)
     multi_test (0.1.1)
     multi_xml (0.5.5)
+    netrc (0.8.0)
     nokogiri (1.6.4.1)
       mini_portile (~> 0.6.0)
     rack (1.6.0)
+    rack-flash3 (1.0.5)
+      rack
     rack-protection (1.5.3)
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    rest-client (1.7.2)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     rspec (3.1.0)
       rspec-core (~> 3.1.0)
       rspec-expectations (~> 3.1.0)
@@ -70,12 +76,15 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  addressable
   capybara
   cucumber
   cucumber-sinatra
   httparty
   json
   launchy
+  rack-flash3
+  rest-client
   rspec
   shotgun
   sinatra
