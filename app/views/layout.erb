@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Workshare File Weights</title>
+  </head>
+  <body>
+    <% if flash[:notice] %>
+    <div id="flash notice">
+      <%= flash[:notice] %>
+    </div>
+    <% end %>
+    <% if flash[:errors] %>
+    <div id="flash notice">
+      <%= flash[:errors] %>
+    </div>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

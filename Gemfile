@@ -5,7 +5,7 @@ gem 'httparty'
 gem 'rack-flash3'
 gem 'rest-client'
 gem 'sinatra'
-gem 'addressable'
+gem 'sinatra-partial'
 
 group :development, :test do
   gem 'capybara'

@@ -64,6 +64,8 @@ GEM
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
+    sinatra-partial (0.4.0)
+      sinatra
     templater (1.0.0)
       diff-lcs (>= 1.1.2)
       extlib (>= 0.9.5)
@@ -76,7 +78,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  addressable
   capybara
   cucumber
   cucumber-sinatra
@@ -88,3 +89,4 @@ DEPENDENCIES
   rspec
   shotgun
   sinatra
+  sinatra-partial
