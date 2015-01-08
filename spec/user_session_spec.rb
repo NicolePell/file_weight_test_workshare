@@ -10,7 +10,7 @@ describe User do
       expect(user.response.code).to eq 201
     end
 
-    xit 'should hold the session token' do
+    it 'should hold the session token' do
       user.login('pellicena@gmail.com', 'makersmake2014')
       expect(user.session["device_credentials"]).not_to be_empty
       expect(user.session["device_credentials"]).not_to be_empty

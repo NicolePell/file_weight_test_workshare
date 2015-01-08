@@ -16,4 +16,8 @@ class User
     end
   end
 
+  def session
+    response.cookies
+  end
+
 end
