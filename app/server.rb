@@ -4,6 +4,7 @@ require 'rack-flash'
 
 
 require './lib/user_session'
+require './lib/files'
 
 enable :sessions
 set :session_secret, 'super secret'
@@ -43,8 +44,20 @@ get '/files' do
   user = User.new
 
   user.login(email, password)
+  user.list_files
+
+  @files = user.file_list
+  
+  files = Files.new
+  files.process(user.file_list)
 
   @email = email
+  @song = files.songs
+  @documents = files.documents
+  @videos = files.videos
+  @binaries = files.binaries
+  @text = files.text
+  @other = files.other
 
   erb :files
 end
