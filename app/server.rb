@@ -47,8 +47,6 @@ get '/files' do
   user.login(email, password)
   user.list_files
 
-  @files = user.file_list
-
   files = Files.new
   files.process(user.file_list)
 
