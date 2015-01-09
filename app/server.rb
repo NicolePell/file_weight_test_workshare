@@ -9,6 +9,7 @@ require './lib/files'
 enable :sessions
 set :session_secret, 'super secret'
 set :partial_template_engine, :erb
+set :public_folder, File.join(File.dirname(__FILE__), '..', 'public')
 
 use Rack::Flash
 
@@ -47,7 +48,7 @@ get '/files' do
   user.list_files
 
   @files = user.file_list
-  
+
   files = Files.new
   files.process(user.file_list)
 
